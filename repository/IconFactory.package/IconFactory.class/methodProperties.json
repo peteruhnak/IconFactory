@@ -1,0 +1,19 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addClassSideTo:" : "PeterUhnak 4/4/2015 12:05",
+		"addGtInspectorTo:" : "PeterUhnak 4/4/2015 12:04",
+		"addIconSelectorTo:" : "PeterUhnak 4/4/2015 12:11",
+		"addInitializeIconsTo:" : "PeterUhnak 4/4/2015 12:06",
+		"addInitializeTo:" : "PeterUhnak 4/4/2015 11:57",
+		"base64ContentsOfFileNamed:" : "PeterUhnak 4/4/2015 11:10",
+		"cachedIconMethodTemplate" : "PeterUhnak 4/4/2015 11:36",
+		"createIconFromFile:inClass:" : "PeterUhnak 4/4/2015 12:57",
+		"createIconsFromDirectory:inClass:" : "PeterUhnak 4/4/2015 11:42",
+		"iconContentsMethodTemplate" : "PeterUhnak 4/4/2015 11:07",
+		"iconMethodTemplate" : "PeterUhnak 4/4/2015 11:37",
+		"initialize" : "PeterUhnak 4/4/2015 12:52",
+		"noCache" : "PeterUhnak 4/4/2015 11:41",
+		"selectIconsIn:" : "PeterUhnak 4/4/2015 12:39",
+		"setup:" : "PeterUhnak 4/4/2015 12:12" } }
