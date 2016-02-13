@@ -1,0 +1,14 @@
+{
+	"category" : "ConfigurationOfIconFactory",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LastVersionLoad" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"project" ],
+	"name" : "ConfigurationOfIconFactory",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
