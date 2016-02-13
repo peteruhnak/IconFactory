@@ -1,6 +1,7 @@
 {
 	"class" : {
-		 },
+		"createIconsFromDirectory:inClass:" : "PeterUhnak 7/21/2015 20:51",
+		"setup:" : "PeterUhnak 7/21/2015 20:51" },
 	"instance" : {
 		"addClassSideTo:" : "PeterUhnak 4/4/2015 12:05",
 		"addGtInspectorTo:" : "PeterUhnak 4/4/2015 12:04",

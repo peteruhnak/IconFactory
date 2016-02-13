@@ -1,5 +1,14 @@
 IconFactory is a utility for creating icons from files.
 
+!! TLDR
+
+"1. Create a new class #MyClass."
+"2. Create icons"
+IconFactory
+	createIconsFromDirectory: '/my/directory/containing/png/icons'
+	inClass: MyIcons.
+
+
 !! 1. Preparing an Icons Class.
 If you wish to have support for:
 - GTInspector support listing the icons
@@ -8,7 +17,7 @@ If you wish to have support for:
 
 Then run (MyIcons class must already exist)
 
-IconFactory new setup: MyIcons.
+IconFactory setup: MyIcons.
 
 Note that this will create/override initialize method in MyIcons!
 
@@ -16,7 +25,7 @@ Note that this will create/override initialize method in MyIcons!
 
 To create the selectors you need to run
 
-IconFactory new 
+IconFactory
 	createIconsFromDirectory: '/my/directory/containing/png/icons'
 	inClass: MyIcons.
 	
