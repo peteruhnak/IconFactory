@@ -3,12 +3,12 @@
 	"classinstvars" : [
 		 ],
 	"classvars" : [
-		"LastVersionLoad" ],
+		 ],
 	"commentStamp" : "PeterUhnak 2/13/2016 14:41",
 	"instvars" : [
-		"project" ],
+		 ],
 	"name" : "ConfigurationOfIconFactory",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "ConfigurationOf",
 	"type" : "normal" }
