@@ -1,20 +1,10 @@
 {
 	"class" : {
-		"DevelopmentSupport" : "PeterUhnak 2/13/2016 14:37:49",
-		"baseConfigurationClassIfAbsent:" : "PeterUhnak 2/13/2016 14:37:49",
 		"catalogChangeLog" : "PeterUhnak 2/13/2016 14:37:49",
 		"catalogContactInfo" : "PeterUhnak 2/13/2016 14:48",
 		"catalogDescription" : "PeterUhnak 2/13/2016 14:37:49",
 		"catalogKeyClassesAndExample" : "PeterUhnak 2/13/2016 14:37:49",
-		"catalogKeywords" : "PeterUhnak 2/13/2016 14:37:49",
-		"ensureMetacello" : "PeterUhnak 2/13/2016 14:37:49",
-		"ensureMetacelloBaseConfiguration" : "PeterUhnak 2/13/2016 14:37:49",
-		"isMetacelloConfig" : "PeterUhnak 2/13/2016 14:37:49",
-		"load" : "PeterUhnak 2/13/2016 14:37:49",
-		"loadBleedingEdge" : "PeterUhnak 2/13/2016 14:37:49",
-		"loadDevelopment" : "PeterUhnak 2/13/2016 14:37:49",
-		"project" : "PeterUhnak 2/13/2016 14:37:49",
-		"validate" : "PeterUhnak 2/13/2016 14:37:49" },
+		"catalogKeywords" : "PeterUhnak 2/13/2016 14:37:49" },
 	"instance" : {
 		"development:" : "PeterUhnak 2/13/2016 14:47",
 		"stable:" : "PeterUhnak 2/13/2016 14:43",
