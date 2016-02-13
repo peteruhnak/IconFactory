@@ -1,0 +1,1 @@
+I am a configuration for IconFactory https://github.com/peteruhnak/IconFactory

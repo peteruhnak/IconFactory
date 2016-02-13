@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		"LastVersionLoad" ],
-	"commentStamp" : "",
+	"commentStamp" : "PeterUhnak 2/13/2016 14:41",
 	"instvars" : [
 		"project" ],
 	"name" : "ConfigurationOfIconFactory",
