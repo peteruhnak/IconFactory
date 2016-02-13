@@ -1,4 +1,4 @@
 catalog
 catalogContactInfo
 	"Returns a paragraph describing contact information such as email, mailing lists and website."
-	^ 'http://smalltalkhub.com/#!/~peteruhnak/IconFactory'
+	^ 'https://github.com/peteruhnak/IconFactory'
