@@ -6,5 +6,5 @@ v1_1_0: spec
 		do:
 			[ spec
 				baseline: 'IconFactory'
-					with: [ spec repository: 'github://peteruhnak/IconFactory:v1.1.0' ];
+					with: [ spec repository: 'github://peteruhnak/IconFactory:v1.1.0/repository' ];
 				import: 'IconFactory' ]
