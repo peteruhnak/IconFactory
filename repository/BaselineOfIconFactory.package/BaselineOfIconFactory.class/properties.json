@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfIconFactory",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "PeterUhnak 2/13/2016 14:38",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfIconFactory",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
