@@ -2,16 +2,21 @@
 
 **IconFactory is a utility for creating icons from files ala `ThemeIcons`.**
 
-![usage-demo](https://dl.dropboxusercontent.com/u/83977405/IconFactory/playground-demo.png)
-![selectors](https://dl.dropboxusercontent.com/u/83977405/IconFactory/selectors.png)
+![usage-demo](figures/playground-demo.png)
+![selectors](figures/selectors.png)
 
 ## 1. Installation
 
-<pre><code>Gofer new
-	smalltalkhubUser: 'peteruhnak' project: 'IconFactory';
-	configurationOf: #IconFactory;
-	loadStable.
-</code></pre>
+You can install it directly from **Catalog Browser**.
+
+If you want to install it manually:
+
+```st
+Metacello new
+	baseline: #IconFactory;
+	repository: 'github://peteruhnak/IconFactory';
+	load
+```
 
 ## 2. Preparing an Icons Class
 If you wish to have support for:
@@ -49,4 +54,3 @@ If you skipped the first step and do not want to use cache, use this instead
 The name of the selector is based on the file name, so for file `/my/directory/logo.png`  you can use `MyIcons current logoIcon`.
 
 (Or `MyIcons new logoIcon` if you don't use cache.)
-Tool for embedding images into Pharo image
