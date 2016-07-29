@@ -1,1 +1,1 @@
-I am a baseline for IconFactory https://github.com/peteruhnak/IconFactory
+I am a baseline for https://github.com/peteruhnak/IconFactory
