@@ -1,1 +1,1 @@
-I am a configuration for IconFactory https://github.com/peteruhnak/IconFactory
+I am a configuration for https://github.com/peteruhnak/IconFactory
