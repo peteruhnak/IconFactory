@@ -1,13 +1,13 @@
 IconFactory is a utility for creating icons from files.
 
-## Creating from a file
+## Creating an icon from a file
 
 ```
 IconFactory
 	createIconFromFile: 'myImage.png' inClass: MyIcons
 ```
 
-## Creating from a folder
+## Creating icons from a folder
 
 1. Create a new class `MyClass`.
 2. Create icons
