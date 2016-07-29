@@ -4,7 +4,7 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "PeterUhnak 7/21/2015 20:52",
+	"commentStamp" : "PeterUhnak 7/29/2016 17:09",
 	"instvars" : [
 		"cached" ],
 	"name" : "IconFactory",
