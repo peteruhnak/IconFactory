@@ -2,4 +2,7 @@ private - templates
 iconMethodTemplate
 	^ '{1}
 	"Private - Generated method"
-	^Form fromBinaryStream: (Base64MimeConverter mimeDecodeToBytes: self {1}Contents readStream)'
+	^ self icons
+		at: #{1}
+		ifAbsentPut: [ Form
+				fromBinaryStream: (Base64MimeConverter mimeDecodeToBytes: self {1}Contents readStream) ]'

@@ -4,11 +4,11 @@
 		 ],
 	"classvars" : [
 		 ],
-	"commentStamp" : "PeterUhnak 8/28/2016 18:54",
+	"commentStamp" : "",
 	"instvars" : [
-		 ],
-	"name" : "IconFactory",
+		"factory" ],
+	"name" : "IconFactoryTest",
 	"pools" : [
 		 ],
-	"super" : "Object",
+	"super" : "TestCase",
 	"type" : "normal" }

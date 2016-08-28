@@ -1,3 +1,0 @@
-public
-noCache
-	cached := false
