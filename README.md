@@ -4,7 +4,7 @@ IconFactory is a utility for importing PNG images from a directory into a class.
 
 Each file will be compiled into the **class-side** of the target class as `<fileName>Icon` selector in base64 format. (Icon suffix will not be duplicated.).
 
-This enables you to distribute the icons directly with your source code.
+This enables you to distribute the images directly with your source code.
 
 Once imported, you can access the `Form` (Pharo's image representation) by sending the appropriate selector, e.g. `MyIcons myCoolIcon`.
 
@@ -16,7 +16,7 @@ Only PNG files are currently supported.
 
 If `MyIcons` class doesn't exist, it will be created in a category of the same name.
 
-This method will install all images not present in #MyIcons and remove all icons not present in the directory.
+This method will install all images not present in #MyIcons and remove all selectors representing images that are not longer present in the directory.
 
 ```st
 IconFactory
@@ -38,7 +38,7 @@ IconFactory
 
 ## Remove old selectors
 
-Remove all selectors (icons) from the class that are not present in the directory.
+Remove all selectors (images) from the class that are not present in the directory.
 
 ```st
 IconFactory
