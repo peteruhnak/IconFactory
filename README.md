@@ -1,3 +1,5 @@
+# IconFactory
+
 IconFactory is a utility for importing PNG images from a directory into a class.
 
 Each file will be compiled into the **class-side** of the target class as `<fileName>Icon` selector in base64 format. (Icon suffix will not be duplicated.).
