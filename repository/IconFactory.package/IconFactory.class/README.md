@@ -10,6 +10,19 @@ Once imported, you can access the `Form` (Pharo's image representation) by sendi
 
 Only PNG files are currently supported.
 
+## Installation
+
+Install `IconFactory` from **Catalog Browser**.
+
+Or run the following script.
+
+```
+Metacello new
+    baseline: #IconFactory;
+    repository: 'github://peteruhnak/IconFactory';
+    load
+```
+
 ## Loading images into a class
 
 If `MyIcons` class doesn't exist, it will be created in a category of the same name.
