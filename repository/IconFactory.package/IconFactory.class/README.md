@@ -35,6 +35,13 @@ IconFactory
 	intoClass: #MyIcons
 ```
 
+You can use a bit of GUI too.
+
+```
+d := UIManager default chooseDirectory.
+IconFactory syncDirectory: d intoClass: #MyIcons
+```
+
 It effectively combines the following two options.
 
 ## Add only images
