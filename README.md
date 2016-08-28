@@ -1,56 +1,63 @@
-# IconFactory
+IconFactory is a utility for importing PNG images from a directory into a class.
 
-**IconFactory is a utility for creating icons from files ala `ThemeIcons`.**
+Each file will be compiled into the **class-side** of the target class as `<fileName>Icon` selector in base64 format. (Icon suffix will not be duplicated.).
 
-![usage-demo](figures/playground-demo.png)
-![selectors](figures/selectors.png)
+This enables you to distribute the icons directly with your source code.
 
-## 1. Installation
+Once imported, you can access the `Form` (Pharo's image representation) by sending the appropriate selector, e.g. `MyIcons myCoolIcon`.
 
-You can install it directly from **Catalog Browser**.
+![](figures/playground-demo.png)
 
-If you want to install it manually:
+Only PNG files are currently supported.
+
+## Loading images into a class
+
+If `MyIcons` class doesn't exist, it will be created in a category of the same name.
+
+This method will install all images not present in #MyIcons and remove all icons not present in the directory.
 
 ```st
-Metacello new
-	baseline: #IconFactory;
-	repository: 'github://peteruhnak/IconFactory';
-	load
+IconFactory
+	syncDirectory: '/home/some/path/myIcons'
+	intoClass: #MyIcons
 ```
 
-## 2. Preparing an Icons Class
-If you wish to have support for:
+It effectively combines the following two options.
 
-  - GTInspector support listing the icons
-  - icon cache
-  - singleton icon class
+## Add only images
 
-Then run (`MyIcons` class must already exist)
+Add all images from the directory into the class.
 
-<pre><code>IconFactory new setup: MyIcons.
-</code></pre>
+```st
+IconFactory
+	loadDirectory: 'd:\some\path\myIcons'
+	intoClass: #MyIcons
+```
 
-**Note that this will create/override `initialize` method in `MyIcons`!**
+## Remove old selectors
 
-## 3. Loading the Icons and Creating Selectors
+Remove all selectors (icons) from the class that are not present in the directory.
 
-To create the selectors you need to run
+```st
+IconFactory
+	removeFromClass: #MyIcons
+	notInDirectory: 'd:\some\path\myIcons'
+```
 
-<pre><code>IconFactory new
-	createIconsFromDirectory: '/my/directory/containing/png/icons'
-	inClass: MyIcons.
-</code></pre>
+## Creating icon for a single file
 
-If you skipped the first step and do not want to use cache, use this instead
+There are private methods that you can use at your own risk. Adding manually images one by one suggests a flaw in a workflow (that was the case for me anyway); but feel free to open a issue with your use case.
 
-<pre><code>IconFactory new
-	noCache;
-	createIconsFromDirectory: '/my/directory/containing/png/icons'
-	inClass: MyIcons.
-</code></pre>
+## Performance note
 
-## 4. Using the icons
+The data is stored as base64 in one `<name>IconContents` method and is converted to `Form` in `<name>Icon`. Because the conversion is slow, it is automatically cached by a Dictionary.
 
-The name of the selector is based on the file name, so for file `/my/directory/logo.png`  you can use `MyIcons current logoIcon`.
+Depending on the size of the image (tested on 24x24) it can easily be 1000x times faster.
 
-(Or `MyIcons new logoIcon` if you don't use cache.)
+```st
+"Without dictionary"
+[ BormEditorIcons personIcon ] bench. "'2,271 per second'"
+
+"With dictionary"
+[ BormEditorIcons personIcon ] bench. "'3,228,827 per second'"
+```
