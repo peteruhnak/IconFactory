@@ -9,7 +9,9 @@ updateReadme
 		writeStreamDo: [ :stream | 
 			stream wantsLineEndConversion: true.
 			stream
-				nextPutAll: '# IconFactory';
+				nextPutAll: '# IconFactory ';
+				nextPutAll:
+					'[![Build Status](https://travis-ci.org/peteruhnak/IconFactory.svg?branch=master)](https://travis-ci.org/peteruhnak/IconFactory)';
 				nextPutAll: String lf;
 				nextPutAll: String lf.
 			stream nextPutAll: IconFactory comment ]
