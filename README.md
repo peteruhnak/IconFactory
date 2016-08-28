@@ -1,4 +1,4 @@
-# IconFactory
+# IconFactory [![Build Status](https://travis-ci.org/peteruhnak/IconFactory.svg?branch=master)](https://travis-ci.org/peteruhnak/IconFactory)
 
 IconFactory is a utility for importing PNG images from a directory into a class.
 
