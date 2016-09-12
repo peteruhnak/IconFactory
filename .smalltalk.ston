@@ -7,6 +7,9 @@ SmalltalkCISpec {
                 }
         ],
         #testing : {
-                #packages : [ 'IconFactory' ]
+                #packages : [ 'IconFactory' ],
+                #coverage : {
+                  #packages : [ 'IconFactory' ]
+                }
         }
 }
