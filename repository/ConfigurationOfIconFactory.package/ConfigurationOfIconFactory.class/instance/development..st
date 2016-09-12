@@ -1,10 +1,4 @@
 symbolic versions
 development: spec
 	<symbolicVersion: #development>
-	spec
-		for: #common
-		do:
-			[ spec
-				baseline: 'IconFactory'
-					with: [ spec repository: 'github://peteruhnak/IconFactory:master/repository' ];
-				import: 'IconFactory' ]
+	spec for: #common version: '2.x-baseline'
