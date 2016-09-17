@@ -3,21 +3,20 @@ createIconFromFile: aFile inClass: aClass
 	"Create the methods for the icon.
 	aFileNamePrefix is the png file name prefix (without the .png suffix)"
 
-	| file aFileNamePrefix base64 contentsSelector selector |
+	| file base64 contentsSelector baseSelector |
 	file := aFile asFileReference.
-	aFileNamePrefix := file base withoutSuffix: 'Icon'.
+	baseSelector := self selectorForName: file base.
 	base64 := self base64Of: file.
-	contentsSelector := (aFileNamePrefix , 'IconContents') asSymbol.
+	contentsSelector := (baseSelector , 'IconContents') asSymbol.
 	((aClass class selectors includes: contentsSelector)
 		and: [ (aClass perform: contentsSelector) = base64 ])
 		ifFalse: [ | contentsSource |
 			contentsSource := self iconContentsMethodTemplate
 				format:
-					{aFileNamePrefix.
+					{baseSelector.
 					file.
 					base64}.
 			aClass class compile: contentsSource classified: 'private - contents' ].
-	selector := (aFileNamePrefix , 'Icon') asSymbol.
 	aClass class
-		compile: (self iconMethodTemplate format: {selector})
+		compile: (self iconMethodTemplate format: {(baseSelector , 'Icon') asSymbol})
 		classified: 'accessing - icons'

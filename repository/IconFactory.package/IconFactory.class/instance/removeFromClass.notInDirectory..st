@@ -6,8 +6,10 @@ removeFromClass: aClassOrName notInDirectory: aDirectory
 	cls := aClassOrName isClass
 		ifTrue: [ aClassOrName ]
 		ifFalse: [ self class environment at: aClassOrName asSymbol ].
-	inClass := (cls class selectorsInCategory: 'accessing - icons') collect: [ :each | each withoutSuffix: 'Icon' ].
-	inDirectory := aDirectory asFileReference allFiles collect: [ :each | each base withoutSuffix: 'Icon' ].
+	inClass := (cls class selectorsInCategory: 'accessing - icons')
+		collect: [ :each | each withoutSuffix: 'Icon' ].
+	inDirectory := aDirectory asFileReference allFiles
+		collect: [ :each | self selectorForName: each base ].
 	(inClass copyWithoutAll: inDirectory)
 		do: [ :each | 
 			(cls class includesSelector: (each , 'Icon') asSymbol)
