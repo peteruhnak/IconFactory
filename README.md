@@ -21,7 +21,7 @@ Or run the following script.
 ```
 Metacello new
     baseline: #IconFactory;
-    repository: 'github://peteruhnak/IconFactory';
+    repository: 'github://peteruhnak/IconFactory/repository';
     load
 ```
 
