@@ -18,7 +18,7 @@ Install `IconFactory` from **Catalog Browser**.
 
 Or run the following script.
 
-```
+```smalltalk
 Metacello new
     baseline: #IconFactory;
     repository: 'github://peteruhnak/IconFactory/repository';
@@ -31,7 +31,7 @@ If `MyIcons` class doesn't exist, it will be created in a category of the same n
 
 This method will install all images not present in #MyIcons and remove all selectors representing images that are not longer present in the directory.
 
-```st
+```smalltalk
 IconFactory
 	syncDirectory: '/home/some/path/myIcons'
 	intoClass: #MyIcons
@@ -39,7 +39,7 @@ IconFactory
 
 You can use a bit of GUI too.
 
-```
+```smalltalk
 d := UIManager default chooseDirectory.
 IconFactory syncDirectory: d intoClass: #MyIcons
 ```
@@ -50,7 +50,7 @@ It effectively combines the following two options.
 
 Add all images from the directory into the class.
 
-```st
+```smalltalk
 IconFactory
 	loadDirectory: 'd:\some\path\myIcons'
 	intoClass: #MyIcons
@@ -60,7 +60,7 @@ IconFactory
 
 Remove all selectors (images) from the class that are not present in the directory.
 
-```st
+```smalltalk
 IconFactory
 	removeFromClass: #MyIcons
 	notInDirectory: 'd:\some\path\myIcons'
@@ -76,7 +76,7 @@ The data is stored as base64 in one `<name>IconContents` method and is converted
 
 Depending on the size of the image (tested on 24x24) it can easily be 1000x times faster.
 
-```st
+```smalltalk
 "Without dictionary"
 [ BormEditorIcons personIcon ] bench. "'2,271 per second'"
 
