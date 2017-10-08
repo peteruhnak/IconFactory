@@ -1,14 +1,11 @@
 {
-	"category" : "IconFactory",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "PeterUhnak 8/28/2016 21:54",
-	"instvars" : [
-		 ],
-	"name" : "IconFactory",
-	"pools" : [
-		 ],
 	"super" : "Object",
-	"type" : "normal" }
+	"category" : "IconFactory",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "IconFactory",
+	"type" : "normal"
+}

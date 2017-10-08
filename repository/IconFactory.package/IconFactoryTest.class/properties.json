@@ -1,14 +1,13 @@
 {
-	"category" : "IconFactory",
-	"classinstvars" : [
-		 ],
-	"classvars" : [
-		 ],
 	"commentStamp" : "",
-	"instvars" : [
-		"factory" ],
-	"name" : "IconFactoryTest",
-	"pools" : [
-		 ],
 	"super" : "TestCase",
-	"type" : "normal" }
+	"category" : "IconFactory",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"factory"
+	],
+	"name" : "IconFactoryTest",
+	"type" : "normal"
+}
