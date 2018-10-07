@@ -123,7 +123,7 @@ IconFactory >> addIconsAccessorTo: aClass [
 
 { #category : #'private - utilities' }
 IconFactory >> base64Of: aFileReference [
-	^ (Base64MimeConverter mimeEncode: aFileReference readStream binary) contents
+	^ (Base64MimeConverter mimeEncode: aFileReference binaryReadStream) contents
 ]
 
 { #category : #'private - loading' }
