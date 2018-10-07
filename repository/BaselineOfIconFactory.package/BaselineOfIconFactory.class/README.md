@@ -1,1 +1,0 @@
-I am a baseline for https://github.com/peteruhnak/IconFactory
