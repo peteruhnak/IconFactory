@@ -123,7 +123,7 @@ IconFactory >> addIconsAccessorTo: aClass [
 
 { #category : #'private - utilities' }
 IconFactory >> base64Of: aFileReference [
-	^ (Base64MimeConverter mimeEncode: aFileReference binaryReadStream) contents
+	^ (aFileReference binaryReadStreamDo: #contents) base64Encoded
 ]
 
 { #category : #'private - loading' }
@@ -166,9 +166,9 @@ IconFactory >> ensureClassFor: aClassOrName [
 				at: aClassOrName asSymbol
 				ifAbsent: [ Object
 						subclass: aClassOrName asSymbol
-						slots: {}
-						classVariables: {#icons}
-						category: aClassOrName ] ].
+						instanceVariableNames: ''
+						classVariableNames: 'icons'
+						package: aClassOrName ] ].
 	self addIconsAccessorTo: cls.
 	^ cls
 ]
@@ -199,8 +199,7 @@ IconFactory >> iconMethodTemplate [
 	"Private - Generated method"
 	^ self icons
 		at: #{1}
-		ifAbsentPut: [ Form
-				fromBinaryStream: (Base64MimeConverter mimeDecodeToBytes: self {1}Contents readStream) ]'
+		ifAbsentPut: [ Form fromBinaryStream: self {1}Contents base64Decoded asByteArray readStream ]'
 ]
 
 { #category : #'private - templates' }
